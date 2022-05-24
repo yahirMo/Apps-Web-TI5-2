@@ -16,3 +16,20 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/Saludo', function(){
+    return 'Hola mi nombre es Alan';
+});
+
+$router->post('/Saludo', function(){
+    return 'se creo un dato';
+});
+
+
+$router->put('/Saludo', function(){
+    return 'update a dato';
+});
+
+$router->delete('/Saludo', function(){
+    return 'se elimino un dato';
+});
