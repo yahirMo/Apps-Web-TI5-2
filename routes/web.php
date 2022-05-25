@@ -13,23 +13,26 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
-
-$router->get('/Saludo', function(){
-    return 'Hola mi nombre es Alan';
-});
-
-$router->post('/Saludo', function(){
-    return 'se creo un dato';
-});
+// $router->get('/Saludo/{nombre}', function($nombre){
+//     return 'Hola mi nombre es '.$nombre;
+// });
 
 
-$router->put('/Saludo', function(){
-    return 'update a dato';
-});
 
-$router->delete('/Saludo', function(){
-    return 'se elimino un dato';
+
+$outer->get('/calcular/{edad}', function($edad){
+
+
+
+    if($edad>0 && $edad<18){
+        return 'eres menor';
+
+    }elseif($edad>=18 && $edad<=100){
+        return 'eres mayor de edad';
+    }
+    else{
+        return 'edad erronea';
+    }
+
+
 });
